@@ -17,7 +17,7 @@ object IPBandwith {
     // The first argument specifies the "master" (see the tutorial notes).
     // The second argument is a name for the job. Additional arguments
     // are optional.
-    val sc = new SparkContext("local", "Word Count (2)")
+    val sc = new SparkContext("local", "IP Bandwidth")
     val sqlc = new SQLContext(sc)
     import sqlc._
 
@@ -25,8 +25,6 @@ object IPBandwith {
     try {
 
       val out = "output/kjv-wc2"
-
-      FileUtil.rmrf(out)
 
 
       // val lineLog = """^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))\s(-\s-)\s(\[.*\])\s(".*")\s([0-9]{3})\s([0-9]*)\s(.*)$""".r
