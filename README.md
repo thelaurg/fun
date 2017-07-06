@@ -1,3 +1,3 @@
 # Spark
 
-Spark + Scala Playground!!!!!
+Spark + Scala Playground!
